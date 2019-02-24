@@ -132,8 +132,8 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'login', 'templates'),)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = '18674447633@163.com'
-EMAIL_HOST_PASSWORD = 'abcd110139'        # 授权码
+EMAIL_HOST_USER = 'xxxx@163.com'
+EMAIL_HOST_PASSWORD = 'xxxx'        # 授权码
 
 # 注册有效期天数
 CONFIRM_DAYS = 7
