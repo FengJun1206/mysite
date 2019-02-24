@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+    <h1>验证用户名和邮箱</h1>
+    <form action="{% url 'test' %}" method="post">
+        <p>
+            <input type="text" name="username" id="id_username" onchange="btn1()">
+            <span id="id_username_span"></span>
+        </p>
+        <input type="submit" value="提交">
+    </form>
+
+    <script>
+        function btn1() {
+            var xhr = new XMLHttpRequest();
+            var data = document.getElementById('id_username').value;
+            console.log(data);
+            var url = '/ajax?username=' + data ;    // /ajax?username=rose
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4){
+                    console.log(xhr.responseText);      //{"message": "\u7528\u6237\u540d\u5df2\u5b58\u5728"}
+                    var d = JSON.parse(xhr.responseText);
+                    console.log(d.message);     // 用户名已存在
+                    document.getElementById('id_username_span').innerHTML = d.message;
+                }
+            };
+            xhr.open('get', url);
+            xhr.send(null);
+
+        }
+        
+
+    </script>
+</body>
+</html>
