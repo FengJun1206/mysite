@@ -9,13 +9,13 @@
 #     # send_mail(
 #     #     '来自 127.0.0.1:8080 的测试邮件',      # 主题 subject
 #     #     '欢迎访问 127.0.0.1:8080，这里是。。。',    # 邮件内容
-#     #     '18674447633@163.com',          # 发送方
-#     #     ['1461024580@qq.com'],       # 接收方
+#     #     'xxxxx@163.com',          # 发送方
+#     #     ['xxxx@qq.com'],       # 接收方
 #     # )
 #
 #     from django.core.mail import EmailMultiAlternatives
 #     # HTML 格式邮件
-#     subject, from_email, to = '来自127.0.0.1:8080的测试邮件', '18674447633@163.com', '1461024580@qq.com'
+#     subject, from_email, to = '来自127.0.0.1:8080的测试邮件', 'xxx7633@163.com', '1xxx580@qq.com'
 #     text_content = '欢迎访问 127.0.0.1:8080'
 #     html_content = '<p>欢迎访问<a href="https://www.baidu.com" target=blank>www.baidu.com</a>，这里是xxx的博客网站</p>'
 #     msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
